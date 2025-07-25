@@ -34,10 +34,10 @@ internal class Program
         Console.WriteLine("");
         Console.WriteLine("-------------- Bill Summary ---------------");
 
-        Console.WriteLine($"Number of small carpets: {NoSmall} $");
-        Console.WriteLine($"Number of large carpets: {NoLarge} $");
-        Console.WriteLine($"Price per small room: {PrSmall} $");
-        Console.WriteLine($"Price per large room: {PrLarge} $");
+        Console.WriteLine($"Number of small carpets: {NoSmall} carpets");
+        Console.WriteLine($"Number of large carpets: {NoLarge} carpets");
+        Console.WriteLine($"Price per small room: {PrSmall.ToString("C")}");
+        Console.WriteLine($"Price per large room: {PrLarge.ToString("C")}");
         Console.WriteLine("=============================================");
       
         //Cost
@@ -47,9 +47,9 @@ internal class Program
         double Tax = cost * 0.06;
 
         double EstCost = cost * 1.06;
-        Console.WriteLine($"Cost : {cost.ToString("N2")} $");
-        Console.WriteLine($"Tax : 6% -> : {Tax.ToString("N2")} $");
-        Console.WriteLine($"Total estimate : {EstCost.ToString("N2")} $");
+        Console.WriteLine($"Cost : {cost.ToString("C")}");
+        Console.WriteLine($"Tax : 6% -> : {Tax.ToString("C")}");
+        Console.WriteLine($"Total estimate : {EstCost.ToString("C")}");
         Console.WriteLine("This estimate is valid for 30 days");
     }
 }
